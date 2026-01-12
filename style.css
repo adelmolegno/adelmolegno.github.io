@@ -371,6 +371,23 @@ body {
   border-radius: 4px;
 }
 
+.inline-link {
+  color: var(--wood-medium);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(90, 43, 16, 0.35);
+}
+
+.inline-link:hover {
+  color: var(--wood-dark);
+  border-bottom-color: rgba(90, 43, 16, 0.75);
+}
+
+.inline-link:focus-visible {
+  outline: 3px solid var(--wood-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 .about-text p {
   margin-bottom: 1.5rem;
 }
