@@ -744,6 +744,7 @@ body {
   width: 100%;
   max-width: 1000px;
   height: auto;
+  background: rgba(243, 229, 196, 0.35);
   display: block;
   margin: 0 auto;
   border-radius: 16px;
