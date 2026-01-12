@@ -20,11 +20,11 @@ window.addEventListener('scroll', () => {
   const currentScroll = window.pageYOffset;
   
   if (currentScroll > 100) {
-    navbar.style.background = 'rgba(61, 40, 23, 0.98)';
+    navbar.style.background = 'rgba(42, 20, 8, 0.98)';
     navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
   } else {
-    navbar.style.background = 'rgba(61, 40, 23, 0.95)';
-    navbar.style.boxShadow = '0 2px 10px rgba(61, 40, 23, 0.2)';
+    navbar.style.background = 'rgba(42, 20, 8, 0.95)';
+    navbar.style.boxShadow = '0 2px 10px rgba(42, 20, 8, 0.22)';
   }
 });
 

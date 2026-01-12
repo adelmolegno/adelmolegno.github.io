@@ -1,16 +1,17 @@
 /* Wood Theme Color Palette */
 :root {
-  --wood-dark: #3d2817;
-  --wood-medium: #6b4423;
-  --wood-light: #8b5a3c;
-  --wood-accent: #a67c52;
-  --wood-cream: #d4c4b0;
-  --wood-tan: #b8956a;
-  --bg-light: #f5f1eb;
-  --bg-dark: #2a1f15;
-  --text-dark: #2a1f15;
-  --text-light: #f5f1eb;
-  --shadow: rgba(61, 40, 23, 0.2);
+  /* Tuned to match imgs/logo.png (warm walnut + golden lettering) */
+  --wood-dark: #2a1408;
+  --wood-medium: #5a2b10;
+  --wood-light: #8a3f15;
+  --wood-accent: #d7a312; /* gold */
+  --wood-cream: #f3e5c4;  /* warm cream */
+  --wood-tan: #c8831f;    /* amber */
+  --bg-light: #fbf5ea;
+  --bg-dark: #1f0f08;
+  --text-dark: #241309;
+  --text-light: #fbf5ea;
+  --shadow: rgba(42, 20, 8, 0.22);
 }
 
 * {
@@ -137,8 +138,7 @@ body {
 }
 
 .hero-logo {
-  max-width: 300px;
-  width: 100%;
+  width: min(92vw, 720px);
   height: auto;
   margin-bottom: 2rem;
   filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
@@ -265,6 +265,47 @@ body {
   font-size: 1.1rem;
   line-height: 1.8;
   color: var(--text-dark);
+}
+
+.about-tagline {
+  margin-bottom: 1.25rem;
+  color: var(--wood-medium);
+}
+
+.bio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+}
+
+.bio-card {
+  background: linear-gradient(135deg, var(--wood-cream) 0%, #fff4dc 100%);
+  border: 2px solid rgba(200, 131, 31, 0.45);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px var(--shadow);
+  padding: 1.5rem;
+}
+
+.bio-title {
+  margin-bottom: 0.75rem;
+  color: var(--wood-dark);
+  font-size: 1.15rem;
+}
+
+.bio-card p {
+  margin-bottom: 0.9rem;
+  color: var(--text-dark);
+}
+
+.bio-note {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  color: var(--wood-medium);
+}
+
+.muted {
+  opacity: 0.8;
 }
 
 .about-text p {
@@ -630,10 +671,6 @@ html {
     font-size: 0.9rem;
   }
 
-  .hero-logo {
-    max-width: 250px;
-  }
-
   .hero-title {
     font-size: 2.5rem;
   }
@@ -661,6 +698,10 @@ html {
   .about-features {
     grid-template-columns: 1fr;
   }
+
+  .bio-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
@@ -679,10 +720,6 @@ html {
   .nav-menu {
     gap: 0.5rem;
     font-size: 0.8rem;
-  }
-
-  .hero-logo {
-    max-width: 200px;
   }
 
   .hero-title {
