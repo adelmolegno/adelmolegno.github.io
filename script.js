@@ -13,6 +13,39 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+// Mobile nav toggle
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.getElementById('navMenu');
+
+function setNavOpen(isOpen) {
+  if (!navToggle || !navMenu) return;
+  navMenu.classList.toggle('is-open', isOpen);
+  navToggle.setAttribute('aria-expanded', String(isOpen));
+  navToggle.setAttribute('aria-label', isOpen ? 'Chiudi menu' : 'Apri menu');
+}
+
+if (navToggle && navMenu) {
+  navToggle.addEventListener('click', () => {
+    const open = navMenu.classList.contains('is-open');
+    setNavOpen(!open);
+  });
+
+  // Close menu after clicking a link
+  navMenu.querySelectorAll('a[href^="#"]').forEach((a) => {
+    a.addEventListener('click', () => setNavOpen(false));
+  });
+
+  // Close on Escape
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setNavOpen(false);
+  });
+
+  // Ensure menu is closed when switching to desktop widths
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) setNavOpen(false);
+  });
+}
+
 // Navbar background on scroll
 const navbar = document.querySelector('.navbar');
 
