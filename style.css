@@ -755,7 +755,8 @@ body {
 
 /* Trustpilot reviews carousel */
 .reviews {
-  background: linear-gradient(180deg, var(--bg-light) 0%, #f3ead9 100%);
+  /* Trustpilot-like: clean light background */
+  background: #f8f8f8;
   padding: 4rem 0;
 }
 
@@ -765,11 +766,24 @@ body {
 }
 
 .review-card {
-  background: linear-gradient(135deg, var(--wood-cream) 0%, #fff4dc 100%);
-  border: 2px solid rgba(200, 131, 31, 0.45);
-  border-radius: 18px;
-  box-shadow: 0 10px 26px rgba(42, 20, 8, 0.18);
+  /* Trustpilot-like: white card + subtle border + green accent */
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
   padding: 1.5rem 1.5rem 1.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.review-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #00b67a; /* Trustpilot green */
 }
 
 .review-meta {
@@ -782,31 +796,31 @@ body {
 
 .review-author {
   font-weight: 700;
-  color: var(--wood-dark);
+  color: #111111;
 }
 
 .review-date {
-  color: var(--wood-medium);
+  color: #6b6b6b;
   font-size: 0.95rem;
   opacity: 0.9;
 }
 
 .review-rating {
-  color: var(--wood-accent);
+  color: #00b67a; /* Trustpilot green */
   margin: 0.25rem 0 0.75rem;
   letter-spacing: 2px;
   font-size: 1.05rem;
 }
 
 .review-text {
-  color: var(--text-dark);
+  color: #1f1f1f;
   font-size: 1.05rem;
   line-height: 1.75;
   margin: 0 0 1rem;
 }
 
 .review-source {
-  color: var(--wood-medium);
+  color: #6b6b6b;
   font-size: 0.95rem;
 }
 
@@ -819,9 +833,9 @@ body {
 }
 
 .reviews-btn {
-  border: 1px solid rgba(200, 131, 31, 0.55);
-  background: rgba(42, 20, 8, 0.15);
-  color: var(--wood-dark);
+  border: 1px solid #dcdcdc;
+  background: #ffffff;
+  color: #1f1f1f;
   border-radius: 999px;
   width: 44px;
   height: 44px;
@@ -831,11 +845,11 @@ body {
 }
 
 .reviews-btn:hover {
-  background: rgba(42, 20, 8, 0.22);
+  background: #f1f1f1;
 }
 
 .reviews-btn:focus-visible {
-  outline: 3px solid var(--wood-accent);
+  outline: 3px solid #00b67a;
   outline-offset: 3px;
 }
 
@@ -850,14 +864,14 @@ body {
   width: 10px;
   height: 10px;
   border-radius: 999px;
-  border: 1px solid rgba(90, 43, 16, 0.55);
-  background: rgba(243, 229, 196, 0.35);
+  border: 1px solid #cfcfcf;
+  background: #ffffff;
   cursor: pointer;
 }
 
 .reviews-dot.is-active {
-  background: var(--wood-accent);
-  border-color: rgba(90, 43, 16, 0.25);
+  background: #00b67a;
+  border-color: #00b67a;
 }
 
 @media (prefers-reduced-motion: reduce) {
