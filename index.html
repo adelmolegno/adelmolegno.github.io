@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Basi e basette in legno realizzate a mano da Adelmo: creazioni artigianali, pirografia e supporti per diorami e figurini."
+      content="Basi e basette in legno per modellismo. Realizzate a mano da Adelmo: creazioni artigianali, pirografia e supporti per diorami e figurini."
     />
-    <title>AdelmoLegno.it — Basi &amp; Basette in legno</title>
+    <title>AdelmoLegno.it — Basi &amp; Basette in legno per modellismo</title>
     <link rel="preload" as="image" href="imgs/brochure.jpg" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
@@ -38,8 +38,8 @@
     <section id="home" class="hero">
       <div class="hero-content">
         <img src="imgs/logo.png" alt="AdelmoLegno.it" class="hero-logo" />
-        <h1 class="hero-title">Basi &amp; Basette in legno</h1>
-        <p class="hero-subtitle">Creazioni artigianali tra passione, legno e dettagli</p>
+        <h1 class="hero-title">Basi &amp; Basette in legno per modellismo</h1>
+        <p class="hero-subtitle">Creazioni artigianali personalizzate - tra passione, legno e dettagli</p>
         <a href="#gallery" class="btn-primary">Vai alla galleria</a>
       </div>
       <div class="wood-grain-overlay"></div>
@@ -75,17 +75,6 @@
                   Ultimamente si diletta anche a realizzare basi e basette per diorami e figurini che dedica ad amici,
                   conoscenti e appassionati del settore.
                 </p>
-                <p class="bio-note">
-                  Cosa dicono di me su <strong>Trustpilot</strong>:
-                  <a
-                    class="trustpilot-link"
-                    href="https://www.trustpilot.com/review/adelmolegno.it"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Leggi le recensioni
-                  </a>
-                </p>
               </article>
 
               <article class="bio-card" aria-label="Biography in English">
@@ -107,40 +96,49 @@
                   Lately he has also been dabbling in making bases and bases for dioramas and figurines, which he dedicates to
                   friends, acquaintances, and enthusiasts in the field.
                 </p>
-                <p class="bio-note">
-                  What they say about me on <strong>Trustpilot</strong>:
-                  <a
-                    class="trustpilot-link"
-                    href="https://www.trustpilot.com/review/adelmolegno.it"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Read reviews
-                  </a>
-                </p>
+                
               </article>
             </div>
           </div>
-          <div class="about-features">
-            <div class="feature">
-              <div class="feature-icon">🪵</div>
-              <h3>Materiali selezionati</h3>
-              <p>Legni scelti con cura, per valorizzare venature e carattere</p>
+
+          <div class="container">
+            <div class="section-header">
+              <p class="section-description">
+                Cosa dicono di me su <a class="inline-link" href="https://www.trustpilot.com/review/adelmolegno.it" target="_blank" rel="noopener noreferrer">Trustpilot</a>
+              </p>
             </div>
-            <div class="feature">
-              <div class="feature-icon">✋</div>
-              <h3>Fatto a mano</h3>
-              <p>Ogni pezzo è unico, realizzato artigianalmente</p>
-            </div>
-            <div class="feature">
-              <div class="feature-icon">🎨</div>
-              <h3>Creatività</h3>
-              <p>Tra tecnica, passione e cura dei dettagli</p>
+    
+            <div class="reviews-carousel" role="region" aria-roledescription="carousel" aria-label="Recensioni">
+              <div class="review-card" id="reviewCard" aria-live="polite">
+                <div class="review-meta">
+                  <div class="review-author" id="reviewAuthor">—</div>
+                  <div class="review-date" id="reviewDate"></div>
+                </div>
+                <div class="review-rating" id="reviewRating" aria-label="Valutazione"></div>
+                <p class="review-text" id="reviewText"></p>
+                <div class="review-source">
+                  Fonte:
+                  <a class="inline-link" href="https://www.trustpilot.com/review/adelmolegno.it" target="_blank" rel="noopener noreferrer">Trustpilot</a>
+                </div>
+              </div>
+    
+              <div class="reviews-controls">
+                <button class="reviews-btn" type="button" id="reviewPrev" aria-label="Recensione precedente">
+                  <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                </button>
+                <div class="reviews-dots" id="reviewDots" aria-label="Selettore recensioni"></div>
+                <button class="reviews-btn" type="button" id="reviewNext" aria-label="Recensione successiva">
+                  <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                </button>
+              </div>
             </div>
           </div>
+         
         </div>
       </div>
     </section>
+
+
 
     <!-- Gallery Section -->
     <section id="gallery" class="gallery">
@@ -154,86 +152,69 @@
             per vedere le mie ultime opere!
           </p>
         </div>
+
+        <div class="about-features">
+          <div class="feature">
+            <div class="feature-icon">🪵</div>
+            <h3>Materiali selezionati</h3>
+            <p>Legni scelti con cura, per valorizzare venature e carattere</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">✋</div>
+            <h3>Fatto a mano</h3>
+            <p>Ogni pezzo è unico, realizzato artigianalmente su misura</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🎨</div>
+            <h3>Creatività</h3>
+            <p>Tra tecnica, passione e cura dei dettagli</p>
+          </div>
+        </div>
+
         <div class="gallery-grid">
           <div class="gallery-item">
             <div class="gallery-image">
               <img src="gallery/basette001.png" alt="Basetta in legno - 001" loading="lazy" />
-            </div>
-            <div class="gallery-info">
-              <h3>Basette 001</h3>
-              <p>Basetta in legno artigianale</p>
             </div>
           </div>
           <div class="gallery-item">
             <div class="gallery-image">
               <img src="gallery/basette002.png" alt="Basetta in legno - 002" loading="lazy" />
             </div>
-            <div class="gallery-info">
-              <h3>Basette 002</h3>
-              <p>Basetta in legno artigianale</p>
-            </div>
           </div>
           <div class="gallery-item">
             <div class="gallery-image">
               <img src="gallery/basette003.png" alt="Basetta in legno - 003" loading="lazy" />
-            </div>
-            <div class="gallery-info">
-              <h3>Basette 003</h3>
-              <p>Basetta in legno artigianale</p>
             </div>
           </div>
           <div class="gallery-item">
             <div class="gallery-image">
               <img src="gallery/basette004.png" alt="Basetta in legno - 004" loading="lazy" />
             </div>
-            <div class="gallery-info">
-              <h3>Basette 004</h3>
-              <p>Basetta in legno artigianale</p>
-            </div>
           </div>
           <div class="gallery-item">
             <div class="gallery-image">
               <img src="gallery/basette005.png" alt="Basetta in legno - 005" loading="lazy" />
-            </div>
-            <div class="gallery-info">
-              <h3>Basette 005</h3>
-              <p>Basetta in legno artigianale</p>
             </div>
           </div>
           <div class="gallery-item">
             <div class="gallery-image">
               <img src="gallery/basette006.png" alt="Basetta in legno - 006" loading="lazy" />
             </div>
-            <div class="gallery-info">
-              <h3>Basette 006</h3>
-              <p>Basetta in legno artigianale</p>
-            </div>
           </div>
           <div class="gallery-item">
             <div class="gallery-image">
               <img src="gallery/basette007.png" alt="Basetta in legno - 007" loading="lazy" />
-            </div>
-            <div class="gallery-info">
-              <h3>Basette 007</h3>
-              <p>Basetta in legno artigianale</p>
             </div>
           </div>
           <div class="gallery-item">
             <div class="gallery-image">
               <img src="gallery/basette008.png" alt="Basetta in legno - 008" loading="lazy" />
             </div>
-            <div class="gallery-info">
-              <h3>Basette 008</h3>
-              <p>Basetta in legno artigianale</p>
-            </div>
           </div>
           <div class="gallery-item">
             <div class="gallery-image">
               <img src="gallery/basette009.png" alt="Basetta in legno - 009" loading="lazy" />
-            </div>
-            <div class="gallery-info">
-              <h3>Basette 009</h3>
-              <p>Basetta in legno artigianale</p>
             </div>
           </div>
         </div>
