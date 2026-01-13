@@ -50,37 +50,42 @@ if (navToggle && navMenu) {
 const TRUSTPILOT_URL = 'https://www.trustpilot.com/review/adelmolegno.it';
 const reviews = [
   {
-    author: 'Paola',
+    author: 'PAOLA',
     date: 'Nov 30, 2025',
     rating: 5,
+    url: 'https://www.trustpilot.com/reviews/692cab88857ff90f183afe48',
     text:
       "Navigando per caso su internet in cerca di basette per figurini modellismo sono stata catturata dalla originalità dei prodotti di Adelmo un artista del legno. Ne ho comprata una per verificare dal vivo. Mi ha enormemente sorpreso per l’ottima qualità. Le sue non sono semplici basette ma opere d’arte."
   },
   {
-    author: 'Umberto',
+    author: 'Umberto Marconi',
     date: 'Nov 14, 2025',
     rating: 5,
+    url: 'https://www.trustpilot.com/reviews/69178894e6f9a1837943f5e8',
     text:
       "Basette bellissime, prezzo più che corretto e soprattutto si acquista da una persona gentilissima, corretta e ultra precisa. Adelmo è riuscito anche ad anticipare i tempi per una mostra."
   },
   {
-    author: 'Vittorio',
+    author: 'Vittorio Rossini',
     date: 'Dec 22, 2025',
-    rating: 5,
+    rating: 4,
+    url: 'https://www.trustpilot.com/reviews/69498d76d70041d009bdb918',
     text:
       "Dal 2023 sono diventato un cliente affezionato e ho ordinato più volte basette su misura, rimanendo sempre soddisfatto dei risultati."
   },
   {
-    author: 'Luciano',
+    author: 'Luciano Veronese',
     date: 'Aug 14, 2025',
     rating: 5,
+    url: 'https://www.trustpilot.com/reviews/689d77f17b77f93ea02f7b92',
     text:
       "Da anni cercavo un prodotto simile e finalmente l’ho trovato! Basi di supporto per figurini davvero ben fatte: qualità e cura nei dettagli."
   },
   {
-    author: 'Benedetto',
+    author: 'Benedetto Pinna',
     date: 'Oct 7, 2025',
     rating: 5,
+    url: 'https://www.trustpilot.com/reviews/68e4c9bf06de1d7839a22d3c',
     text:
       "Altissima professionalità. Persona gentilissima, disponibile e molto appassionata in ciò che fa. Nel mondo del modellismo, risultati eccellenti."
   }
@@ -91,6 +96,7 @@ const reviewAuthor = document.getElementById('reviewAuthor');
 const reviewDate = document.getElementById('reviewDate');
 const reviewRating = document.getElementById('reviewRating');
 const reviewText = document.getElementById('reviewText');
+const reviewSourceLink = document.getElementById('reviewSourceLink');
 const reviewPrev = document.getElementById('reviewPrev');
 const reviewNext = document.getElementById('reviewNext');
 const reviewDots = document.getElementById('reviewDots');
@@ -112,6 +118,10 @@ function renderReview(i) {
   reviewRating.textContent = starString(r.rating);
   reviewRating.setAttribute('aria-label', `Valutazione ${r.rating} su 5`);
   reviewText.textContent = r.text;
+
+  if (reviewSourceLink) {
+    reviewSourceLink.href = r.url || TRUSTPILOT_URL;
+  }
 
   if (reviewDots) {
     [...reviewDots.querySelectorAll('.reviews-dot')].forEach((d, idx) => {
